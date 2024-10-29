@@ -1,4 +1,6 @@
 # lvl easy
 
-select id,movie,description,rating from
-cinema where (id mod 2) <> 0 and description <> 'boring' order by id desc
+select id,movie,description,rating
+from cinema where description not in("boring") and
+id%2=1 
+order by rating desc
